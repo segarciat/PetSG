@@ -6,15 +6,24 @@
   font-size: 3rem;
   margin-bottom: 1rem; }
 
+.l-heading-2 {
+  font-size: 2rem;
+  margin-bottom: 1rem; }
+
 .btn {
   text-decoration: none;
   border: none;
+  border-radius: 15px;
   cursor: pointer;
   padding: 1.5rem;
   background: #f4f4f4;
   color: #333; }
-  .btn:hover {
-    color: #a42422; }
+
+.btn-main {
+  background: #a42422;
+  color: #fff; }
+  .btn-main:hover {
+    background: #90201e; }
 
 .padding-y2 {
   padding: 1rem 0; }
@@ -22,13 +31,16 @@
 .size-1 {
   font-size: 1.5rem; }
 
+.txt-ctr {
+  text-align: center; }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
 body {
-  background: #fff;
+  background: #f4f4f4;
   font-family: "Livvic", sans-serif;
   line-height: 1.2; }
 
@@ -73,10 +85,9 @@ ul {
           display: none;
           background: #90201e;
           position: absolute;
+          top: 100%;
           left: 0;
           width: 100%; }
-          #navbar .navbar-wrap .nav-menu .dropdown ul > li:first-child {
-            margin-top: 1.5rem; }
         #navbar .navbar-wrap .nav-menu .dropdown:hover ul {
           display: block; }
           #navbar .navbar-wrap .nav-menu .dropdown:hover ul li:hover {
@@ -164,6 +175,49 @@ ul {
       #services .services-wrap i:hover {
         background: #a42422;
         color: #333; }
+
+#about-info {
+  background: #f4f4f4; }
+  #about-info .about-content {
+    margin: 1rem 0;
+    padding: 0 2rem;
+    font-size: 1rem;
+    display: grid;
+    grid-template-areas: 'about-story sergio' 'contact-form peggy';
+    grid-gap: 2rem; }
+    #about-info .about-content .about-story {
+      grid-area: about-story;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 15px; }
+    #about-info .about-content .contact-form {
+      background: #fff;
+      padding: 1rem;
+      grid-area: contact-form;
+      border-radius: 25px; }
+      #about-info .about-content .contact-form form {
+        display: flex;
+        flex-direction: column; }
+        #about-info .about-content .contact-form form .text-input {
+          padding: 0.75rem;
+          border-radius: 25px;
+          border: none;
+          margin-bottom: 0.75rem;
+          background: #f4f4f4; }
+          #about-info .about-content .contact-form form .text-input:focus {
+            border-radius: inherit; }
+        #about-info .about-content .contact-form form .message-input {
+          height: 100px; }
+        #about-info .about-content .contact-form form button[type='submit'] {
+          margin-top: 1rem;
+          font-size: 1rem; }
+    #about-info .about-content .sergio-img {
+      grid-area: sergio; }
+    #about-info .about-content .peggy {
+      grid-area: peggy; }
+    #about-info .about-content .peggy, #about-info .about-content .sergio-img {
+      width: 80%;
+      border-radius: 10%; }
 
 footer {
   background: #3e0e0d;
