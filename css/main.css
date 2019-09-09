@@ -34,6 +34,9 @@
 .txt-ctr {
   text-align: center; }
 
+.mb-2 {
+  margin-bottom: 2rem; }
+
 * {
   margin: 0;
   padding: 0;
@@ -107,8 +110,7 @@ ul {
     color: #fff;
     font-size: 1.5rem;
     padding: 0 6rem;
-    position: relative;
-    z-index: 1; }
+    position: relative; }
     #showcase .showcase-content a {
       font-size: 1.2rem;
       margin-top: 1rem; }
@@ -122,45 +124,44 @@ ul {
     width: 100%; }
 
 #home-adopt {
+  text-align: center; }
+
+.pet-cards {
+  padding: 5% 0;
   text-align: center;
-  margin-bottom: 2rem; }
-  #home-adopt .pet-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    #home-adopt .pet-cards .pet-card {
-      position: relative;
-      background: #fff;
-      padding-bottom: 2rem;
-      margin: 3rem 2rem;
-      max-width: 300px;
-      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3); }
-      #home-adopt .pet-cards .pet-card .description {
-        position: absolute;
-        top: 70%;
-        background: #f4f4f4;
-        width: 100%;
-        height: 40%; }
-        #home-adopt .pet-cards .pet-card .description h3 {
-          position: relative;
-          top: 20%;
-          color: #a42422;
-          font-size: 1.3rem;
-          margin: 0.5rem 0;
-          transition: all 0.5s ease-in-out; }
-        #home-adopt .pet-cards .pet-card .description .summary {
-          opacity: 0;
-          position: relative;
-          top: 70%;
-          transition: all 0.5s ease-in-out; }
-      #home-adopt .pet-cards .pet-card:hover h3 {
-        top: 0; }
-      #home-adopt .pet-cards .pet-card:hover .summary {
-        opacity: 1;
-        top: 0; }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem; }
+  .pet-cards .pet-card {
+    position: relative;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3); }
+    .pet-cards .pet-card .description {
+      background: #f4f4f4;
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      height: 30%;
+      bottom: 0; }
+      .pet-cards .pet-card .description h3 {
+        color: #a42422;
+        position: relative;
+        top: 40%;
+        transition: all 0.5s ease-in-out; }
+      .pet-cards .pet-card .description .summary {
+        position: relative;
+        opacity: 0;
+        top: 100%;
+        transition: all 0.5s ease-in-out; }
+    .pet-cards .pet-card img {
+      position: relative; }
+    .pet-cards .pet-card:hover h3 {
+      top: 0; }
+    .pet-cards .pet-card:hover .summary {
+      top: 5%;
+      opacity: 1; }
 
 #services {
-  background: #ddd;
+  background: #fff;
   text-align: center;
   padding: 3rem 0; }
   #services .services-wrap {
@@ -176,48 +177,50 @@ ul {
         background: #a42422;
         color: #333; }
 
-#about-info {
-  background: #f4f4f4; }
-  #about-info .about-content {
-    margin: 1rem 0;
-    padding: 0 2rem;
-    font-size: 1rem;
-    display: grid;
-    grid-template-areas: 'about-story sergio' 'contact-form peggy';
-    grid-gap: 2rem; }
-    #about-info .about-content .about-story {
-      grid-area: about-story;
-      background: #fff;
-      padding: 2rem;
-      border-radius: 15px; }
-    #about-info .about-content .contact-form {
-      background: #fff;
-      padding: 1rem;
-      grid-area: contact-form;
-      border-radius: 25px; }
-      #about-info .about-content .contact-form form {
-        display: flex;
-        flex-direction: column; }
-        #about-info .about-content .contact-form form .text-input {
-          padding: 0.75rem;
-          border-radius: 25px;
-          border: none;
-          margin-bottom: 0.75rem;
-          background: #f4f4f4; }
-          #about-info .about-content .contact-form form .text-input:focus {
-            border-radius: inherit; }
-        #about-info .about-content .contact-form form .message-input {
-          height: 100px; }
-        #about-info .about-content .contact-form form button[type='submit'] {
-          margin-top: 1rem;
-          font-size: 1rem; }
-    #about-info .about-content .sergio-img {
-      grid-area: sergio; }
-    #about-info .about-content .peggy {
-      grid-area: peggy; }
-    #about-info .about-content .peggy, #about-info .about-content .sergio-img {
-      width: 80%;
-      border-radius: 10%; }
+#about-info .about-content {
+  margin: 1rem 0;
+  padding: 0 2rem;
+  font-size: 1rem;
+  display: grid;
+  grid-template-areas: 'about-story peggy' 'contact-form sergio';
+  grid-gap: 2rem; }
+  #about-info .about-content .about-story {
+    grid-area: about-story;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px; }
+  #about-info .about-content .contact-form {
+    background: #fff;
+    padding: 1rem;
+    grid-area: contact-form;
+    border-radius: 25px; }
+    #about-info .about-content .contact-form form {
+      display: flex;
+      flex-direction: column; }
+      #about-info .about-content .contact-form form .text-input {
+        padding: 0.75rem;
+        border-radius: 25px;
+        border: none;
+        margin-bottom: 0.75rem;
+        background: #f4f4f4; }
+        #about-info .about-content .contact-form form .text-input:focus {
+          border-radius: inherit; }
+      #about-info .about-content .contact-form form .message-input {
+        height: 100px; }
+      #about-info .about-content .contact-form form button[type='submit'] {
+        margin-top: 1rem;
+        font-size: 1rem; }
+  #about-info .about-content .sergio-img {
+    grid-area: sergio; }
+  #about-info .about-content .peggy {
+    grid-area: peggy; }
+  #about-info .about-content .peggy, #about-info .about-content .sergio-img {
+    width: 80%;
+    border-radius: 10%; }
+
+#cats {
+  max-height: 1000px;
+  padding-top: 2rem; }
 
 footer {
   background: #3e0e0d;
