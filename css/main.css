@@ -106,7 +106,6 @@ ul {
     align-items: center;
     justify-content: center;
     height: 100%;
-    text-align: center;
     color: #fff;
     font-size: 1.5rem;
     padding: 0 6rem;
@@ -123,12 +122,8 @@ ul {
     height: 100%;
     width: 100%; }
 
-#home-adopt {
-  text-align: center; }
-
 .pet-cards {
   padding: 5% 0;
-  text-align: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4rem; }
@@ -162,7 +157,6 @@ ul {
 
 #services {
   background: #fff;
-  text-align: center;
   padding: 3rem 0; }
   #services .services-wrap {
     display: flex;
@@ -218,9 +212,45 @@ ul {
     width: 80%;
     border-radius: 10%; }
 
-#cats {
+#cats, #dogs {
   max-height: 1000px;
   padding-top: 2rem; }
+
+#adopt {
+  margin-bottom: 2rem; }
+  #adopt .adopt-form {
+    border-radius: 30px;
+    background: #fff; }
+    #adopt .adopt-form h1 {
+      color: #a42422; }
+    #adopt .adopt-form form {
+      border-radius: 30px;
+      padding: 1.5rem;
+      display: grid;
+      grid-template-areas: 'name email inquiry inquiry inquiry' 'phone choice inquiry inquiry inquiry' 'home occupation inquiry inquiry inquiry'; }
+      #adopt .adopt-form form .name-input {
+        grid-area: name; }
+      #adopt .adopt-form form .email-input {
+        grid-area: email; }
+      #adopt .adopt-form form .phone-input {
+        grid-area: phone; }
+      #adopt .adopt-form form .choice-input {
+        grid-area: choice; }
+      #adopt .adopt-form form .home-input {
+        grid-area: home; }
+      #adopt .adopt-form form .occupation-input {
+        grid-area: occupation; }
+      #adopt .adopt-form form .inquiry-input {
+        grid-area: inquiry;
+        border-radius: 30px;
+        padding: 0.75rem 0.25rem; }
+      #adopt .adopt-form form .form-group {
+        margin-bottom: 1rem; }
+      #adopt .adopt-form form .text-input {
+        border-radius: 30px;
+        padding: 0.75rem;
+        margin: 0.5rem 0.5rem 1rem 0;
+        background: #f4f4f4; }
 
 footer {
   background: #3e0e0d;
