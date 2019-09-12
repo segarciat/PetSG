@@ -200,6 +200,12 @@ ul {
   display: grid;
   grid-template-areas: 'about-story peggy' 'contact-form sergio';
   grid-gap: 2rem; }
+  #about-info .about-content .sergio-img {
+    grid-area: sergio; }
+  #about-info .about-content .peggy {
+    grid-area: peggy; }
+  #about-info .about-content .peggy, #about-info .about-content .sergio-img {
+    border-radius: 10%; }
   #about-info .about-content .about-story {
     grid-area: about-story;
     background: #fff;
@@ -213,13 +219,6 @@ ul {
       flex-direction: column; }
       #about-info .about-content .contact-form form .message-input {
         height: 100px; }
-  #about-info .about-content .sergio-img {
-    grid-area: sergio; }
-  #about-info .about-content .peggy {
-    grid-area: peggy; }
-  #about-info .about-content .peggy, #about-info .about-content .sergio-img {
-    width: 80%;
-    border-radius: 10%; }
 
 #cats, #dogs {
   max-height: 1000px;
@@ -261,17 +260,27 @@ ul {
         margin: 0.5rem 0.5rem 1rem 0;
         background: #f4f4f4; }
 
-#vet-services .container > div, #pet-supplies .container > div, #new-owners .container > div {
-  background: #fff;
-  margin: 1.5rem 0;
-  padding: 2rem;
-  display: flex;
-  justify-content: space-between; }
-  #vet-services .container > div > div, #pet-supplies .container > div > div, #new-owners .container > div > div {
-    order: 1; }
-  #vet-services .container > div img, #pet-supplies .container > div img, #new-owners .container > div img {
-    order: 2;
-    width: 50%; }
+#vet-services, #pet-supplies, #new-owners {
+  font-size: 1.2rem;
+  text-align: justify; }
+  #vet-services ul, #pet-supplies ul, #new-owners ul {
+    list-style: disc; }
+  #vet-services .container > div, #pet-supplies .container > div, #new-owners .container > div {
+    background: #fff;
+    margin: 1.5rem 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between; }
+    #vet-services .container > div > div, #pet-supplies .container > div > div, #new-owners .container > div > div {
+      padding-right: 1rem;
+      order: 1;
+      flex: 2; }
+    #vet-services .container > div img, #pet-supplies .container > div img, #new-owners .container > div img {
+      order: 2;
+      flex: 1;
+      width: 100%; }
+    #vet-services .container > div a, #pet-supplies .container > div a, #new-owners .container > div a {
+      color: #a42422; }
 
 footer {
   background: #3e0e0d;
