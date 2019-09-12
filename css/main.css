@@ -37,6 +37,27 @@
 .mb-2 {
   margin-bottom: 2rem; }
 
+.b-rad-2 {
+  border-radius: 30px; }
+
+.b-rad-1 {
+  border-radius: 15px; }
+
+.text-input {
+  padding: 0.75rem;
+  border: none;
+  margin-bottom: 0.75rem;
+  background: #f4f4f4; }
+  .text-input:focus {
+    border-radius: 0; }
+
+button[type='submit'] {
+  margin-top: 1rem;
+  font-size: 1rem; }
+
+.message-input:focus {
+  border-radius: 0; }
+
 * {
   margin: 0;
   padding: 0;
@@ -49,7 +70,6 @@ body {
 
 a {
   text-decoration: none;
-  color: #f4f4f4;
   font-weight: bold; }
 
 img {
@@ -78,6 +98,8 @@ ul {
         font-weight: bold;
         padding: 1.5rem 1.3rem;
         font-size: 1.2rem; }
+        #navbar .navbar-wrap .nav-menu li a {
+          color: #f4f4f4; }
         #navbar .navbar-wrap .nav-menu li:hover {
           cursor: pointer;
           background: #90201e;
@@ -160,7 +182,7 @@ ul {
   padding: 3rem 0; }
   #services .services-wrap {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-around; }
     #services .services-wrap i {
       background: #333;
       border-radius: 50%;
@@ -181,29 +203,16 @@ ul {
   #about-info .about-content .about-story {
     grid-area: about-story;
     background: #fff;
-    padding: 2rem;
-    border-radius: 15px; }
+    padding: 2rem; }
   #about-info .about-content .contact-form {
     background: #fff;
     padding: 1rem;
-    grid-area: contact-form;
-    border-radius: 25px; }
+    grid-area: contact-form; }
     #about-info .about-content .contact-form form {
       display: flex;
       flex-direction: column; }
-      #about-info .about-content .contact-form form .text-input {
-        padding: 0.75rem;
-        border-radius: 25px;
-        border: none;
-        margin-bottom: 0.75rem;
-        background: #f4f4f4; }
-        #about-info .about-content .contact-form form .text-input:focus {
-          border-radius: inherit; }
       #about-info .about-content .contact-form form .message-input {
         height: 100px; }
-      #about-info .about-content .contact-form form button[type='submit'] {
-        margin-top: 1rem;
-        font-size: 1rem; }
   #about-info .about-content .sergio-img {
     grid-area: sergio; }
   #about-info .about-content .peggy {
@@ -219,15 +228,13 @@ ul {
 #adopt {
   margin-bottom: 2rem; }
   #adopt .adopt-form {
-    border-radius: 30px;
     background: #fff; }
     #adopt .adopt-form h1 {
       color: #a42422; }
     #adopt .adopt-form form {
-      border-radius: 30px;
       padding: 1.5rem;
       display: grid;
-      grid-template-areas: 'name email inquiry inquiry inquiry' 'phone choice inquiry inquiry inquiry' 'home occupation inquiry inquiry inquiry'; }
+      grid-template-areas: 'name email inquiry inquiry inquiry' 'phone choice inquiry inquiry inquiry' 'home occupation inquiry inquiry inquiry' 'other other submit submit submit'; }
       #adopt .adopt-form form .name-input {
         grid-area: name; }
       #adopt .adopt-form form .email-input {
@@ -240,17 +247,31 @@ ul {
         grid-area: home; }
       #adopt .adopt-form form .occupation-input {
         grid-area: occupation; }
+      #adopt .adopt-form form .other-input {
+        grid-area: other; }
+      #adopt .adopt-form form button[type='submit'] {
+        grid-area: submit; }
       #adopt .adopt-form form .inquiry-input {
         grid-area: inquiry;
-        border-radius: 30px;
         padding: 0.75rem 0.25rem; }
       #adopt .adopt-form form .form-group {
         margin-bottom: 1rem; }
       #adopt .adopt-form form .text-input {
-        border-radius: 30px;
         padding: 0.75rem;
         margin: 0.5rem 0.5rem 1rem 0;
         background: #f4f4f4; }
+
+#vet-services .container > div, #pet-supplies .container > div, #new-owners .container > div {
+  background: #fff;
+  margin: 1.5rem 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between; }
+  #vet-services .container > div > div, #pet-supplies .container > div > div, #new-owners .container > div > div {
+    order: 1; }
+  #vet-services .container > div img, #pet-supplies .container > div img, #new-owners .container > div img {
+    order: 2;
+    width: 50%; }
 
 footer {
   background: #3e0e0d;
