@@ -29,18 +29,22 @@ dog3.jpg: Adam Kontor, pexels.com
     <div class="container">
       <div class="navbar-wrap">
         <div class="logo">
-          <i class="fas fa-paw fa-3x">
-            PetSG
-          </i>
+          <a href="./index.html"><i class="fas fa-paw fa-3x">PetSG</i></a>
+        </div>
+        <input type="checkbox">
+        <div class="hamburger">
+          <div class="mid"></div>
+          <div class="top"></div>
+          <div class="bottom"></div>
         </div>
         <ul class="nav-menu">
-          <li ><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li class="dropdown current">
             Gallery <i class="fas fa-angle-down"></i>
             <ul>
-              <li ><a href="cats.html">Cats <i class="fas fa-cat"></i></a></li>
-              <li><a href="dogs.html">Dogs <i class="fas fa-dog"></i></a></li>
+              <li><a href="cats.html">Cats <i class="fas fa-cat"></i></a></li>
+              <li class="current"><a href="dogs.html">Dogs <i class="fas fa-dog"></i></a></li>
             </ul>
           </li>
           <li><a href="resources.html">Resources</a></li>
@@ -120,7 +124,7 @@ dog3.jpg: Adam Kontor, pexels.com
   </section>
   <section id="adopt">
     <div class="container">
-      <div class="adopt-form">
+      <div class="adopt-form b-rad-2">
       <h1 class="heading txt-ctr">Curious about our bone fetchers?</h1>
       <form>
           <input type="text" placeholder="Name" class="name-input text-input b-rad-2">
@@ -136,11 +140,7 @@ dog3.jpg: Adam Kontor, pexels.com
               <option value="other">Other</option>
             </select>
           </div>
-          <div class="other-input">
-            <label for="other">If other, explain:</label>
-            <input type="text" class="other">
-          </div>
-          <div class="occupation-input">
+          <div class="occupation-input form-group">
             <label for="job">Occupation:</label>
             <select name="job">
               <option value="full">Full-time</option>

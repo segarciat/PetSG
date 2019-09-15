@@ -45,6 +45,7 @@
 
 .text-input {
   padding: 0.75rem;
+  width: 100%;
   border: none;
   margin-bottom: 0.75rem;
   background: #f4f4f4; }
@@ -53,7 +54,8 @@
 
 button[type='submit'] {
   margin-top: 1rem;
-  font-size: 1rem; }
+  font-size: 1rem;
+  width: 100%; }
 
 .message-input:focus {
   border-radius: 0; }
@@ -71,6 +73,8 @@ body {
 a {
   text-decoration: none;
   font-weight: bold; }
+  a:visited, a:active {
+    color: inherit; }
 
 img {
   width: 100%; }
@@ -84,10 +88,48 @@ ul {
   z-index: 2;
   background: #a42422; }
   #navbar .navbar-wrap {
+    position: relative;
+    margin: 0 1rem;
     color: #f4f4f4;
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    #navbar .navbar-wrap input[type='checkbox'] {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      opacity: 0;
+      margin-top: 0.5rem; }
+    #navbar .navbar-wrap .hamburger {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 2rem;
+      height: 2rem;
+      margin-top: 0.5rem; }
+      #navbar .navbar-wrap .hamburger .mid {
+        position: relative;
+        height: 0.2rem;
+        width: 100%;
+        top: 40%;
+        background: #f4f4f4; }
+      #navbar .navbar-wrap .hamburger .top {
+        position: relative;
+        height: 0.2rem;
+        width: 100%;
+        top: 0;
+        background: #f4f4f4; }
+      #navbar .navbar-wrap .hamburger .bottom {
+        position: relative;
+        height: 0.2rem;
+        width: 100%;
+        top: 50%;
+        background: #f4f4f4; }
     #navbar .navbar-wrap .nav-menu {
       height: 100%;
       display: flex; }
@@ -145,6 +187,7 @@ ul {
     width: 100%; }
 
 .pet-cards {
+  margin: 0 2rem;
   padding: 5% 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -181,6 +224,7 @@ ul {
   background: #fff;
   padding: 3rem 0; }
   #services .services-wrap {
+    margin: 0 2rem;
     display: flex;
     justify-content: space-around; }
     #services .services-wrap i {
@@ -221,19 +265,20 @@ ul {
         height: 100px; }
 
 #cats, #dogs {
-  max-height: 1000px;
   padding-top: 2rem; }
 
 #adopt {
   margin-bottom: 2rem; }
   #adopt .adopt-form {
+    padding: 2rem;
     background: #fff; }
     #adopt .adopt-form h1 {
       color: #a42422; }
     #adopt .adopt-form form {
-      padding: 1.5rem;
+      padding: 1rem 0;
       display: grid;
-      grid-template-areas: 'name email inquiry inquiry inquiry' 'phone choice inquiry inquiry inquiry' 'home occupation inquiry inquiry inquiry' 'other other submit submit submit'; }
+      grid-template-areas: 'name email inquiry inquiry inquiry' 'phone choice inquiry inquiry inquiry' 'home occupation submit submit submit';
+      grid-gap: 1rem; }
       #adopt .adopt-form form .name-input {
         grid-area: name; }
       #adopt .adopt-form form .email-input {
@@ -246,8 +291,6 @@ ul {
         grid-area: home; }
       #adopt .adopt-form form .occupation-input {
         grid-area: occupation; }
-      #adopt .adopt-form form .other-input {
-        grid-area: other; }
       #adopt .adopt-form form button[type='submit'] {
         grid-area: submit; }
       #adopt .adopt-form form .inquiry-input {
@@ -255,10 +298,6 @@ ul {
         padding: 0.75rem 0.25rem; }
       #adopt .adopt-form form .form-group {
         margin-bottom: 1rem; }
-      #adopt .adopt-form form .text-input {
-        padding: 0.75rem;
-        margin: 0.5rem 0.5rem 1rem 0;
-        background: #f4f4f4; }
 
 #vet-services, #pet-supplies, #new-owners {
   font-size: 1.2rem;
@@ -267,7 +306,7 @@ ul {
     list-style: disc; }
   #vet-services .container > div, #pet-supplies .container > div, #new-owners .container > div {
     background: #fff;
-    margin: 1.5rem 0;
+    margin: 1.5rem 2rem;
     padding: 2rem;
     display: flex;
     justify-content: space-between; }
@@ -287,6 +326,7 @@ footer {
   color: #fff;
   padding: 2rem 0; }
   footer .footer-wrap {
+    margin: 0 2rem;
     display: flex;
     justify-content: space-between; }
     footer .footer-wrap i {
@@ -301,3 +341,62 @@ footer {
       color: #c4302b; }
     footer .footer-wrap .fa-instagram {
       color: #3f729b; }
+
+@media (max-width: 1024px) {
+  .pet-cards {
+    font-size: 0.75rem;
+    grid-gap: 2rem; }
+  #services .service {
+    margin: 0 1rem; }
+  #vet-services .container > div, #pet-supplies .container > div, #new-owners .container > div {
+    flex-direction: column; }
+  #vet-services img, #pet-supplies img, #new-owners img {
+    margin-top: 2rem; } }
+
+@media (max-width: 800px) {
+  #showcase {
+    height: 50vh; }
+  #about-info .about-content {
+    grid-template-areas: 'about-story peggy' 'about-story sergio' 'contact-form contact-form'; } }
+
+@media (max-width: 420px) {
+  #navbar .navbar-wrap {
+    display: block; }
+    #navbar .navbar-wrap .hamburger, #navbar .navbar-wrap input[type='checkbox'] {
+      display: block; }
+    #navbar .navbar-wrap .nav-menu {
+      display: none; }
+    #navbar .navbar-wrap input[type='checkbox']:checked ~ .nav-menu {
+      display: block;
+      margin-top: 0.5rem; }
+      #navbar .navbar-wrap input[type='checkbox']:checked ~ .nav-menu .dropdown:hover ul {
+        position: relative; }
+  #showcase .showcase-content h1 {
+    font-size: 2rem; }
+  #showcase .showcase-content p {
+    font-size: 1rem; }
+  #home-adopt h2 {
+    font-size: 2rem; }
+  #home-adopt p {
+    font-size: 1rem; }
+  .pet-cards {
+    display: block; }
+    .pet-cards .pet-card {
+      margin: 1.5rem 1rem;
+      font-size: 1rem; }
+  #services .services-wrap {
+    display: block; }
+    #services .services-wrap .service {
+      margin-bottom: 1rem; }
+  #about-info .about-content {
+    display: block; }
+    #about-info .about-content .about-story {
+      margin-bottom: 1rem; }
+    #about-info .about-content .sergio-img, #about-info .about-content .peggy {
+      display: none; }
+  #adopt .adopt-form h1 {
+    font-size: 1.5rem; }
+  #adopt .adopt-form form {
+    display: block; }
+    #adopt .adopt-form form .inquiry-input {
+      height: 150px; } }
