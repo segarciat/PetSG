@@ -73,7 +73,8 @@ body {
 a {
   text-decoration: none;
   font-weight: bold; }
-  a:visited {
+  a:visited, a:hover, a:active, a:active {
+    text-decoration: none;
     color: #f4f4f4; }
 
 img {
