@@ -74,7 +74,7 @@ a {
   text-decoration: none;
   font-weight: bold; }
   a:visited {
-    color: inherit; }
+    color: #f4f4f4; }
 
 img {
   width: 100%; }
@@ -369,7 +369,7 @@ footer {
     #navbar .navbar-wrap input[type='checkbox']:checked ~ .nav-menu {
       display: block;
       margin-top: 0.5rem; }
-      #navbar .navbar-wrap input[type='checkbox']:checked ~ .nav-menu .dropdown:hover ul {
+      #navbar .navbar-wrap input[type='checkbox']:checked ~ .nav-menu .dropdown ul {
         position: relative; }
   #showcase .showcase-content h1 {
     font-size: 1.25rem; }
@@ -377,15 +377,15 @@ footer {
     font-size: 0.75rem; }
   #showcase .showcase-content a {
     font-size: 0.75rem; }
-  #home-adopt h2 {
+  #home-adopt .l-heading {
     font-size: 2rem; }
-  #home-adopt p {
+  #home-adopt .l-heading ~ p {
     font-size: 1rem; }
   .pet-cards {
     display: block; }
     .pet-cards .pet-card {
       margin: 1.5rem 1rem;
-      font-size: 1rem; }
+      font-size: rem; }
   #services .services-wrap {
     display: block; }
     #services .services-wrap .service {
