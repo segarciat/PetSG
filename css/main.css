@@ -73,7 +73,7 @@ body {
 a {
   text-decoration: none;
   font-weight: bold; }
-  a:visited, a:active {
+  a:visited {
     color: inherit; }
 
 img {
@@ -372,9 +372,11 @@ footer {
       #navbar .navbar-wrap input[type='checkbox']:checked ~ .nav-menu .dropdown:hover ul {
         position: relative; }
   #showcase .showcase-content h1 {
-    font-size: 2rem; }
+    font-size: 1.25rem; }
   #showcase .showcase-content p {
-    font-size: 1rem; }
+    font-size: 0.75rem; }
+  #showcase .showcase-content a {
+    font-size: 0.75rem; }
   #home-adopt h2 {
     font-size: 2rem; }
   #home-adopt p {
