@@ -1,122 +1,176 @@
 <!-- Images from: pexels.com -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a465367bb1.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Livvic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./img/paw_favicon.ico"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PetSG | Pet Center</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/a465367bb1.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="shortcut icon" type="image/x-icon" href="./img/paw_favicon.ico">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PetSG | Pet Center </title>
-</head>
-
-<body>
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="container">
-      <div class="navbar-wrap">
-        <div class="logo">
-          <a href="./index.html"><i class="fas fa-paw fa-3x">PetSG</i></a>
-        </div>
-        <input type="checkbox">
-        <div class="hamburger">
-          <div class="mid"></div>
-          <div class="top"></div>
-          <div class="bottom"></div>
-        </div>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li class="current"><a href="about.html">About Us</a></li>
-          <li class="dropdown" onclick="">
-            Gallery <i class="fas fa-angle-down"></i>
-            <ul>
-              <li><a href="cats.html">Cats <i class="fas fa-cat"></i></a></li>
-              <li><a href="dogs.html">Dogs <i class="fas fa-dog"></i></a></li>
-            </ul>
-          </li>
-          <li><a href="resources.html">Resources</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- End Navbar -->
-  <section id="about-info">
-    <div class="container">
-      <div class="about-content">
-        <div class="about-story b-rad-1">
-          <h2 class="l-heading-2">About PetSG</h2>
-          <p style="font-weight:bold">
-            DISCLAIMER: This page is a fictional, and none
-            of the pets here are actually up for adoption.
-            These pictures were taken from pexels.com.
-            I do not claim ownership of any of the images in
-            this website, except the ones in this about page.
-          </p>
-          <br>
-          <p>
-              Hi, I am Sergio Garcia. PetSG is a fictional
-              site that I made in order to practice my HTML 
-              and CSS skills. I decided on the pet theme because
-              I recently adopted a cat, whose name is Peggy Sue.
-              I learned about Peggy through a friend who had 
-              seen a posting about her.
-          </p>
-          <br>
-          <p>I went all the way to Long Island to get Peggy. 
-              Peggy's owner at the time could not keep Peggy because
-              his wife was allergic, and prior to that she belonged
-              to a lady who had unfortunately passed.
-          </p>
-          <br>
-          <p>
-            I have now had Peggy for a couple of months, and 
-            I love her. I think she's starting to feel the 
-            same way, too. Adopt a pet, and see how your life 
-            will change, along with that of your pet!
-          </p>
-          <br>
-          <p>Please feel free to provide any feedback on 
-            how to make the website look cooler. If you would
-            like to work on something together, feel free
-            to submit a form to contact me, too!
-          </p>
-        </div>
-        <div class="contact-form b-rad-2">
-          <h2 class="l-heading-2">
-            Contact Me!
-          </h2>
-          <form name="contact" method="POST" data-netlify="true">
-            <input type="text" class="text-input name-input b-rad-2" placeholder="Name" name="name">
-            <input type="text" class="text-input subject-input b-rad-2" placeholder="Subject" name="subject">
-            <input type="email" class="text-input email-input b-rad-2" placeholder="Email" name="email">
-            <input type="phone" class="text-input phone-input b-rad-2" placeholder="Phone Number" name="phone">
-            <textarea name="message" class="text-input message-input b-rad-2" placeholder="Enter a message" name="message"></textarea>
-            <button type="submit" class="btn btn-main">Submit</button>
-          </form>
-        </div>
-        <img src="./img/GarciaTapia.JPG" alt="Picture of Sergio" class="sergio-img">
-        <img src="./img/peggy.jpg" alt="My cat Peggy Sue" class="peggy">
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-wrap">
-        <p>Copyright &copy; 2019 All rights Reserved</p>
-        <div class="social">
-          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com" target="_blank"> <i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="container">
+        <div class="navbar-wrap">
+          <div class="logo">
+            <a href="./index.html"><i class="fas fa-paw fa-3x">PetSG</i></a>
+          </div>
+          <input type="checkbox" />
+          <div class="hamburger">
+            <div class="mid"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="about.html">About Us</a></li>
+            <li class="dropdown" onclick="">
+              Gallery <i class="fas fa-angle-down"></i>
+              <ul>
+                <li>
+                  <a href="cats.html">Cats <i class="fas fa-cat"></i></a>
+                </li>
+                <li>
+                  <a href="dogs.html">Dogs <i class="fas fa-dog"></i></a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
+    </nav>
+    <!-- End Navbar -->
+    <section id="about-info">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-story b-rad-1">
+            <h2 class="l-heading-2">About PetSG</h2>
+            <p style="font-weight: bold">
+              DISCLAIMER: This page is a fictional, and none of the pets here
+              are actually up for adoption. These pictures were taken from
+              pexels.com. I do not claim ownership of any of the images in this
+              website, except the ones in this about page.
+            </p>
+            <br />
+            <p>
+              Hi, I am Sergio Garcia. PetSG is a fictional site that I made in
+              order to practice my HTML and CSS skills. I decided on the pet
+              theme because I recently adopted a cat, whose name is Peggy Sue. I
+              learned about Peggy through a friend who had seen a posting about
+              her.
+            </p>
+            <br />
+            <p>
+              I went all the way to Long Island to get Peggy. Peggy's owner at
+              the time could not keep Peggy because his wife was allergic, and
+              prior to that she belonged to a lady who had unfortunately passed.
+            </p>
+            <br />
+            <p>
+              I have now had Peggy for a couple of months, and I love her. I
+              think she's starting to feel the same way, too. Adopt a pet, and
+              see how your life will change, along with that of your pet!
+            </p>
+            <br />
+            <p>
+              Please feel free to provide any feedback on how to make the
+              website look cooler. If you would like to work on something
+              together, feel free to submit a form to contact me, too!
+            </p>
+          </div>
+          <div class="contact-form b-rad-2">
+            <h2 class="l-heading-2">Contact Me!</h2>
+            <form name="contact" method="POST" data-netlify="true">
+              <input
+                type="text"
+                class="text-input name-input b-rad-2"
+                placeholder="Name"
+                name="name"
+              />
+              <input
+                type="text"
+                class="text-input subject-input b-rad-2"
+                placeholder="Subject"
+                name="subject"
+              />
+              <input
+                type="email"
+                class="text-input email-input b-rad-2"
+                placeholder="Email"
+                name="email"
+              />
+              <input
+                type="phone"
+                class="text-input phone-input b-rad-2"
+                placeholder="Phone Number"
+                name="phone"
+              />
+              <textarea
+                name="message"
+                class="text-input message-input b-rad-2"
+                placeholder="Enter a message"
+                name="message"
+              ></textarea>
+              <button type="submit" class="btn btn-main">Submit</button>
+            </form>
+          </div>
+          <img
+            src="./img/GarciaTapia.JPG"
+            alt="Picture of Sergio"
+            class="sergio-img"
+          />
+          <img src="./img/peggy.jpg" alt="My cat Peggy Sue" class="peggy" />
+        </div>
+      </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-wrap">
+          <p>Copyright &copy; 2019 All rights Reserved</p>
+          <div class="social">
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><i class="fab fa-twitter fa-2x"></i
+            ></a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <i class="fab fa-facebook fa-2x"></i
+            ></a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><i class="fab fa-instagram fa-2x"></i
+            ></a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><i class="fab fa-youtube fa-2x"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

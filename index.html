@@ -11,149 +11,188 @@ dog3.jpg: Adam Kontor, pexels.com
 -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Livvic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./img/paw_favicon.ico"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PetSG | Pet Center</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="shortcut icon" type="image/x-icon" href="./img/paw_favicon.ico">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PetSG | Pet Center </title>
-</head>
+  <body>
+    <!-- Need a favicon for browser tab -->
+    <!-- Header -->
 
-<body>
-  <!-- Need a favicon for browser tab -->
-  <!-- Header -->
-
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="container">
-      <div class="navbar-wrap">
-        <div class="logo">
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="container">
+        <div class="navbar-wrap">
+          <div class="logo">
             <a href="./index.html"><i class="fas fa-paw fa-3x">PetSG</i></a>
+          </div>
+          <input type="checkbox" />
+          <div class="hamburger">
+            <div class="mid"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+          </div>
+          <ul class="nav-menu">
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown" onclick="">
+              Gallery <i class="fas fa-angle-down"></i>
+              <ul>
+                <li>
+                  <a href="cats.html">Cats <i class="fas fa-cat"></i></a>
+                </li>
+                <li>
+                  <a href="dogs.html">Dogs <i class="fas fa-dog"></i></a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
         </div>
-        <input type="checkbox">
-        <div class="hamburger">
-          <div class="mid"></div>
-          <div class="top"></div>
-          <div class="bottom"></div>
-        </div>
-        <ul class="nav-menu">
-          <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li class="dropdown" onclick="">
-            Gallery <i class="fas fa-angle-down"></i>
-            <ul>
-              <li><a href="cats.html">Cats <i class="fas fa-cat"></i></a></li>
-              <li><a href="dogs.html">Dogs <i class="fas fa-dog"></i></a></li>
-            </ul>
-          </li>
-          <li><a href="resources.html">Resources</a></li>
-        </ul>
       </div>
-    </div>
-  </nav>
-  <!-- End Navbar -->
+    </nav>
+    <!-- End Navbar -->
 
-  <!-- Showcase -->
-  <section id="showcase">
-    <div class="showcase-content txt-ctr">
-      <h1 class="l-heading">A world of happiness awaits</h1>
-      <p>Learn how to change the life of one of our beautiful friends, and how they can change yours</p>
-      <a href="./about.html" class="btn btn-main">Read more</a>
-    </div>
-  </section>
+    <!-- Showcase -->
+    <section id="showcase">
+      <div class="showcase-content txt-ctr">
+        <h1 class="l-heading">
+          A world of happiness awaits
+          <a
+            href="https://github.com/sergentserg/petsg"
+            target="_blank"
+            rel="noreferrer noopener"
+            ><i class="fab fa-github fa-2x"></i
+          ></a>
+        </h1>
+        <p>
+          Learn how to change the life of one of our beautiful friends, and how
+          they can change yours
+        </p>
+        <a href="./about.html" class="btn btn-main">Read more</a>
+      </div>
+    </section>
 
-  <!-- Home Adopt Section -->
-  <section id="home-adopt" class="txt-ctr">
-    <div class="container">
-      <h2 class="l-heading padding-y2">
-        Looking to adopt?
-      </h2>
-      <p class="size-1">We may have a pet that suits you!</p>
-      <p class="size-1 mb-1">Check out our Gallery!</p>
-      <div class="pet-cards txt-ctr">
-        <div class="pet-card">
-          <img src="./img/cat1.jpg" alt="Cat with green eyes">
-          <div class="description">
-            <h3>Phoebe</h3>
-            <div class="summary">
-              <p>Short-haired cat</p>
-              <p>Adult &diams; Female</p>
+    <!-- Home Adopt Section -->
+    <section id="home-adopt" class="txt-ctr">
+      <div class="container">
+        <h2 class="l-heading padding-y2">Looking to adopt?</h2>
+        <p class="size-1">We may have a pet that suits you!</p>
+        <p class="size-1 mb-1">Check out our Gallery!</p>
+        <div class="pet-cards txt-ctr">
+          <div class="pet-card">
+            <img src="./img/cat1.jpg" alt="Cat with green eyes" />
+            <div class="description">
+              <h3>Phoebe</h3>
+              <div class="summary">
+                <p>Short-haired cat</p>
+                <p>Adult &diams; Female</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pet-card">
-          <img src="./img/dog3.jpg" alt="Black and brown dog">
-          <div class="description">
-            <h3>Mia</h3>
+          <div class="pet-card">
+            <img src="./img/dog3.jpg" alt="Black and brown dog" />
+            <div class="description">
+              <h3>Mia</h3>
               <div class="summary">
                 <p>German Shepperd</p>
                 <p>Adult &diams; Female</p>
               </div>
+            </div>
           </div>
-        </div>
-        <div class="pet-card">
-          <a href="./"></a>
-          <img src="./img/cat2.jpg" alt="Yellow-haired cat">
-          <div class="description">
-            <h3>Sunny</h3>
+          <div class="pet-card">
+            <a href="./"></a>
+            <img src="./img/cat2.jpg" alt="Yellow-haired cat" />
+            <div class="description">
+              <h3>Sunny</h3>
               <div class="summary">
                 <p>Yellow-haired cat</p>
                 <p>Adult &diams; Female</p>
               </div>
             </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="services" class="txt-ctr">
-    <div class="container">
-      <h2 class="l-heading padding-y2">
-        Services
-      </h2>
-      <div class="services-wrap">
-        <div class="service">
-            <a href="./resources.html"><i class="fas fa-briefcase-medical fa-4x"></i></a>
-          <h3 class="padding-y2">Veterinarian Services</h3>
-          <p>We know that your pet's health is your priority,
-            and it is ours too.
-          </p>
-        </div>
-        <div class="service">
+    <section id="services" class="txt-ctr">
+      <div class="container">
+        <h2 class="l-heading padding-y2">Services</h2>
+        <div class="services-wrap">
+          <div class="service">
+            <a href="./resources.html"
+              ><i class="fas fa-briefcase-medical fa-4x"></i
+            ></a>
+            <h3 class="padding-y2">Veterinarian Services</h3>
+            <p>
+              We know that your pet's health is your priority, and it is ours
+              too.
+            </p>
+          </div>
+          <div class="service">
             <a href="./resources.html"><i class="fas fa-dice fa-4x"></i> </a>
             <h3 class="padding-y2">Pet Toys</h3>
-            <p>Check out our assortment of toys meant to
-              stimualte your pet!
-            </p>
-        </div>
-        <div class="service">
-            <a href="./resources.html"><i class="far fa-question-circle fa-4x"></i></a>
+            <p>Check out our assortment of toys meant to stimualte your pet!</p>
+          </div>
+          <div class="service">
+            <a href="./resources.html"
+              ><i class="far fa-question-circle fa-4x"></i
+            ></a>
             <h3 class="padding-y2">New Pet Owner?</h3>
-            <p>We know how nerve-wracking it is. Let us help you
-              get started
-            </p>
+            <p>We know how nerve-wracking it is. Let us help you get started</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-wrap">
-        <p>Copyright &copy; 2019 All rights Reserved</p>
-        <div class="social">
-          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com" target="_blank"> <i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-wrap">
+          <p>Copyright &copy; 2019 All rights Reserved</p>
+          <div class="social">
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><i class="fab fa-twitter fa-2x"></i
+            ></a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <i class="fab fa-facebook fa-2x"></i
+            ></a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><i class="fab fa-instagram fa-2x"></i
+            ></a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><i class="fab fa-youtube fa-2x"></i
+            ></a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <script src="https://kit.fontawesome.com/a465367bb1.js"></script>
-</body>
+    </footer>
+    <script src="https://kit.fontawesome.com/a465367bb1.js"></script>
+  </body>
 </html>

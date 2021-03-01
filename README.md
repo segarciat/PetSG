@@ -1,17 +1,19 @@
-## About
+# PetSG
 
-PetSG is a fictional pet-themed site that I made to practice my HTML/CSS. It was a solo project that I made up as I worked on it.
+PetSG is a mock pet-themed site, and it is live at https://petsg.xyz
 
-## Features
+## Description
 
-The site has is rather simple, with a Home, About, Resources, as well as a Gallery with Dogs and Cats. I implemented some simple CSS animations, and added some simple forms. I used some media queries to try and make the page responsive, so it should look OK on smaller devices. I used CSS grid and flexbox for some of the layout. The site was deployed with netlify, and its live here: 
+PetSG is the first website I ever made. I kept it simple by using just HTML and CSS (well, SASS). I got the idea from the fact that, at the time, I had just recently adopted my cat Peggy.
 
-https://loving-goodall-28e667.netlify.com/index.html
+## Authors and Acknowledgement
 
-## Where did you get the images?
+- Sergio Garcia (myself).
+- I got all the images from https://www.pexels.com/, and tried to list the owners in `acknowledgement.md`.
 
-I got all the images from https://www.pexels.com/. 
+## Project Status
 
-## Questions?
+Though I declared this project as finished around a year and a half ago, I have been thinking of going back to refactor the website. Among the ideas in mind are:
 
-If you have any questions, please email me at: gsergio488@gmail.com
+- Rebuilding the application to use REACT.
+- Using the [PetFinder API](https://www.petfinder.com/developers/v2/docs/).

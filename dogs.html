@@ -11,163 +11,214 @@ dog3.jpg: Adam Kontor, pexels.com
 -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/a465367bb1.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Livvic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./img/paw_favicon.ico"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PetSG | Pet Center</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/a465367bb1.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Livvic&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel="shortcut icon" type="image/x-icon" href="./img/paw_favicon.ico">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>PetSG | Pet Center </title>
-</head>
-
-<body>
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="container">
-      <div class="navbar-wrap">
-        <div class="logo">
-          <a href="./index.html"><i class="fas fa-paw fa-3x">PetSG</i></a>
+  <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+      <div class="container">
+        <div class="navbar-wrap">
+          <div class="logo">
+            <a href="./index.html"><i class="fas fa-paw fa-3x">PetSG</i></a>
+          </div>
+          <input type="checkbox" />
+          <div class="hamburger">
+            <div class="mid"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+          </div>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown current" onclick="">
+              Gallery <i class="fas fa-angle-down"></i>
+              <ul>
+                <li>
+                  <a href="cats.html">Cats <i class="fas fa-cat"></i></a>
+                </li>
+                <li class="current">
+                  <a href="dogs.html">Dogs <i class="fas fa-dog"></i></a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="resources.html">Resources</a></li>
+          </ul>
         </div>
-        <input type="checkbox">
-        <div class="hamburger">
-          <div class="mid"></div>
-          <div class="top"></div>
-          <div class="bottom"></div>
-        </div>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li class="dropdown current" onclick="">
-            Gallery <i class="fas fa-angle-down"></i>
-            <ul>
-              <li><a href="cats.html">Cats <i class="fas fa-cat"></i></a></li>
-              <li class="current"><a href="dogs.html">Dogs <i class="fas fa-dog"></i></a></li>
-            </ul>
-          </li>
-          <li><a href="resources.html">Resources</a></li>
-        </ul>
       </div>
-    </div>
-  </nav>
-  <!-- End Navbar -->
-  <section id="dogs">
-    <div class="container">
+    </nav>
+    <!-- End Navbar -->
+    <section id="dogs">
+      <div class="container">
         <h1 class="l-heading txt-ctr">
-           A (hu)man's best friend <i class="fas fa-dog"></i>
-          </h1>
-      <div class="pet-cards text-ctr">
-        <div class="pet-card">
-          <img src="./img/dog1.jpg" alt="dog with green eyes">
-          <div class="description txt-ctr">
-            <h3>Appa</h3>
-            <div class="summary">
-              <p>Maltese</p>
-              <p>Puppy &diams; Male</p>
+          A (hu)man's best friend <i class="fas fa-dog"></i>
+        </h1>
+        <div class="pet-cards text-ctr">
+          <div class="pet-card">
+            <img src="./img/dog1.jpg" alt="dog with green eyes" />
+            <div class="description txt-ctr">
+              <h3>Appa</h3>
+              <div class="summary">
+                <p>Maltese</p>
+                <p>Puppy &diams; Male</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pet-card">
-          <img src="./img/dog2.jpg" alt="dog with green eyes">
-          <div class="description txt-ctr">
-            <h3>Kevin</h3>
-            <div class="summary">
-              <p>Golden Retriever Mix</p>
-              <p>Adult &diams; Female</p>
+          <div class="pet-card">
+            <img src="./img/dog2.jpg" alt="dog with green eyes" />
+            <div class="description txt-ctr">
+              <h3>Kevin</h3>
+              <div class="summary">
+                <p>Golden Retriever Mix</p>
+                <p>Adult &diams; Female</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pet-card">
-          <img src="./img/dog3.jpg" alt="dog with green eyes">
-          <div class="description txt-ctr">
-            <h3>Mia</h3>
-            <div class="summary">
-              <p>German Shepperd</p>
-              <p>Adult &diams; Female</p>
+          <div class="pet-card">
+            <img src="./img/dog3.jpg" alt="dog with green eyes" />
+            <div class="description txt-ctr">
+              <h3>Mia</h3>
+              <div class="summary">
+                <p>German Shepperd</p>
+                <p>Adult &diams; Female</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pet-card">
-          <img src="./img/dog4.jpg" alt="dog with green eyes">
-          <div class="description txt-ctr">
-            <h3>Jake</h3>
-            <div class="summary">
-              <p>Mixed</p>
-              <p>Young &diams; Male</p>
+          <div class="pet-card">
+            <img src="./img/dog4.jpg" alt="dog with green eyes" />
+            <div class="description txt-ctr">
+              <h3>Jake</h3>
+              <div class="summary">
+                <p>Mixed</p>
+                <p>Young &diams; Male</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pet-card">
-          <img src="./img/dog5.jpg" alt="dog with green eyes">
-          <div class="description txt-ctr">
-            <h3>Max</h3>
-            <div class="summary">
-              <p>Mixed</p>
-              <p>Puppy &diams; Male</p>
+          <div class="pet-card">
+            <img src="./img/dog5.jpg" alt="dog with green eyes" />
+            <div class="description txt-ctr">
+              <h3>Max</h3>
+              <div class="summary">
+                <p>Mixed</p>
+                <p>Puppy &diams; Male</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="pet-card">
-          <img src="./img/dog6.jpg" alt="dog with green eyes">
-          <div class="description txt-ctr">
-            <h3>Anna</h3>
-            <div class="summary">
-              <p>Golden Retriever</p>
-              <p>Senior &diams; Female</p>
+          <div class="pet-card">
+            <img src="./img/dog6.jpg" alt="dog with green eyes" />
+            <div class="description txt-ctr">
+              <h3>Anna</h3>
+              <div class="summary">
+                <p>Golden Retriever</p>
+                <p>Senior &diams; Female</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section id="adopt">
-    <div class="container">
-      <div class="adopt-form b-rad-2">
-      <h1 class="heading txt-ctr">Curious about our bone fetchers?</h1>
-      <form name="contact" method="POST" data-netlify="true">
-          <input type="text" placeholder="Name" class="name-input text-input b-rad-2">
-          <input type="email" placeholder="Email" class="email-input text-input b-rad-2">
-          <input type="phone" placeholder="Phone Number" class="phone-input text-input b-rad-2">
-          <input type="text" placeholder="Pet choice" class="choice-input text-input b-rad-2">
-          <div class="form-group home-input">
-            <label for="home-type">Do you live in:</label>
-            <select name="home-type" class="home-type">Do you live in:
-              <option value="house">House</option>        
-              <option value="apartment">Apartment</option>
-              <option value="condo">Condo</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          <div class="occupation-input form-group">
-            <label for="job">Occupation:</label>
-            <select name="job">
-              <option value="full">Full-time</option>
-              <option value="part">Part-time</option>
-              <option value="unemployed">Unemployed</option>
-            </select>
-          </div>
-          <textarea name="inquiry" class="inquiry-input text-input b-rad-2" placeholder="Details concerning pet of choice"></textarea>
-          <button type="submit" class="btn btn-main">Submit</button>
-      </form>
-    </div>
-    </div>
-  </section>
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-wrap">
-        <p>Copyright &copy; 2019 All rights Reserved</p>
-        <div class="social">
-          <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="https://www.facebook.com" target="_blank"> <i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+    </section>
+    <section id="adopt">
+      <div class="container">
+        <div class="adopt-form b-rad-2">
+          <h1 class="heading txt-ctr">Curious about our bone fetchers?</h1>
+          <form name="contact" method="POST" data-netlify="true">
+            <input
+              type="text"
+              placeholder="Name"
+              class="name-input text-input b-rad-2"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="email-input text-input b-rad-2"
+            />
+            <input
+              type="phone"
+              placeholder="Phone Number"
+              class="phone-input text-input b-rad-2"
+            />
+            <input
+              type="text"
+              placeholder="Pet choice"
+              class="choice-input text-input b-rad-2"
+            />
+            <div class="form-group home-input">
+              <label for="home-type">Do you live in:</label>
+              <select name="home-type" class="home-type">
+                Do you live in:
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="condo">Condo</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="occupation-input form-group">
+              <label for="job">Occupation:</label>
+              <select name="job">
+                <option value="full">Full-time</option>
+                <option value="part">Part-time</option>
+                <option value="unemployed">Unemployed</option>
+              </select>
+            </div>
+            <textarea
+              name="inquiry"
+              class="inquiry-input text-input b-rad-2"
+              placeholder="Details concerning pet of choice"
+            ></textarea>
+            <button type="submit" class="btn btn-main">Submit</button>
+          </form>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
-
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-wrap">
+          <p>Copyright &copy; 2019 All rights Reserved</p>
+          <div class="social">
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><i class="fab fa-twitter fa-2x"></i
+            ></a>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <i class="fab fa-facebook fa-2x"></i
+            ></a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><i class="fab fa-instagram fa-2x"></i
+            ></a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noreferrer noopener"
+              ><i class="fab fa-youtube fa-2x"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
