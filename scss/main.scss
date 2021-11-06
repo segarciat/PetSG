@@ -1,0 +1,432 @@
+@import 'config';
+@import 'utilities';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $light-color;
+  font-family: $font-stack;
+  line-height: 1.2;
+}
+
+a {
+  color: $light-color;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: $light-color;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+#navbar {
+  height: 4rem;
+  background: $primary-color;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  .container {
+    height: 100%;
+  }
+
+  .navbar-wrap {
+    height: 100%;
+    color: $light-color;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hamburger i {
+      display: none;
+      font-size: 2rem;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    input[type='checkbox'] {
+      display: none;
+    }
+
+    .nav-menu {
+      background-color: $primary-color;
+      height: 100%;
+      display: flex;
+
+      .current {
+        background: $thirdary-color;
+      }
+
+      li,
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      a {
+        height: 100%;
+        width: 100%;
+        padding: 1rem 0.75rem;
+      }
+
+      a:hover,
+      li.dropdown:hover {
+        cursor: pointer;
+        background: $secondary-color;
+        color: #fff;
+      }
+
+      li.dropdown {
+        position: relative;
+        padding: 1rem 0.75rem;
+
+        ul {
+          display: none;
+          background: $primary-color;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+        }
+
+        &:hover ul {
+          display: block;
+        }
+      } // end .dropdown
+    } // end .nav-menu
+  } // end .navbar-wrap
+} // end #navbar
+
+// Home #showcase
+#showcase {
+  background: url('../img/showcase-img.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  // Send it to the back so that it doesn't block the nav bar dropdown link
+  // z-index: -1;
+
+  .showcase-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0 6rem;
+    position: relative;
+    // z-index works if have position attribute
+    // z-index: 1;
+    // position: relative;
+
+    a {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  } // end showcase-content
+
+  //overlay
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    height: 100%;
+    width: 100%;
+  } // end &:before (overlay);
+} // end showcase
+
+.pet-cards {
+  margin: 0 2rem;
+  padding: 5% 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4rem;
+
+  .pet-card {
+    position: relative;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+
+    .description {
+      background: $light-color;
+      // Stretch out as much as the image
+      width: 100%;
+      height: 50%;
+      position: absolute;
+      height: 30%;
+      bottom: 0;
+
+      h3 {
+        color: $primary-color;
+        position: relative;
+        top: 40%;
+        transition: all 0.5s ease-in-out;
+      } // end h3
+
+      .summary {
+        position: relative;
+        opacity: 0;
+        top: 100%;
+        transition: all 0.5s ease-in-out;
+      } // end .summary
+    } // end .description
+
+    img {
+      position: relative;
+    } // end .img
+
+    &:hover {
+      h3 {
+        top: 0;
+      }
+
+      .summary {
+        top: 5%;
+        opacity: 1;
+      }
+    }
+  } // end .pet-card
+} // end .pet-cards
+
+// Home - services
+#services {
+  background: #fff;
+  padding: 3rem 0;
+  .services-wrap {
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-around;
+
+    i {
+      background: $dark-color;
+      border-radius: 50%;
+      color: $primary-color;
+      padding: 1.5rem;
+      transition: all 0.25s ease-in;
+
+      &:hover {
+        background: $primary-color;
+        color: $dark-color;
+      }
+    }
+  } // end .services-wrap
+} // end #services
+
+// About Page
+#about-info {
+  // height: 1000px;
+  .about-content {
+    margin: 1rem 0;
+    padding: 0 2rem;
+    font-size: 1rem;
+    display: grid;
+    grid-template-areas:
+      'about-story peggy'
+      'contact-form sergio';
+    grid-gap: 2rem;
+
+    .sergio-img {
+      grid-area: sergio;
+    }
+
+    .peggy {
+      grid-area: peggy;
+    }
+
+    .peggy,
+    .sergio-img {
+      // width: 80%;
+      border-radius: 10%;
+    }
+
+    .about-story {
+      grid-area: about-story;
+      background: #fff;
+      padding: 2rem;
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 1rem;
+      grid-area: contact-form;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        .message-input {
+          height: 100px;
+        }
+      } // end form
+    } // end contact-form
+  } // end .about-content
+} // end #about-info
+
+// Cats page
+#cats,
+#dogs {
+  // max-height: 1000px;
+  padding-top: 2rem;
+}
+
+// Cats page - adopt section
+#adopt {
+  margin-bottom: 2rem;
+
+  .adopt-form {
+    padding: 2rem;
+    background: #fff;
+
+    h1 {
+      color: $primary-color;
+    }
+
+    form {
+      padding: 1rem 0;
+      display: grid;
+      grid-template-areas:
+        'name email inquiry inquiry inquiry'
+        'phone choice inquiry inquiry inquiry'
+        'home occupation submit submit submit';
+      grid-gap: 1rem;
+
+      .name-input {
+        grid-area: name;
+      }
+
+      .email-input {
+        grid-area: email;
+      }
+
+      .phone-input {
+        grid-area: phone;
+      }
+
+      .choice-input {
+        grid-area: choice;
+      }
+
+      .home-input {
+        grid-area: home;
+      }
+
+      .occupation-input {
+        grid-area: occupation;
+      }
+
+      button[type='submit'] {
+        grid-area: submit;
+      }
+
+      .inquiry-input {
+        grid-area: inquiry;
+        padding: 0.75rem 0.25rem;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+    } // end form
+  } // end .adopt-form
+} // end #adopt
+
+// Resources page
+#vet-services,
+#pet-supplies,
+#new-owners {
+  font-size: 1.2rem;
+  text-align: justify;
+  ul {
+    list-style: disc;
+  }
+  & .container > div {
+    background: #fff;
+    margin: 1.5rem 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      padding-right: 1rem;
+      order: 1;
+      flex: 2;
+    }
+
+    img {
+      order: 2;
+      flex: 1;
+      width: 100%;
+    }
+
+    a {
+      color: $primary-color;
+    }
+  } // end vet-container
+} // end #ver-services
+
+// Footer
+footer {
+  background: $dark-red;
+  color: #fff;
+  padding: 2rem 0;
+
+  .footer-wrap {
+    margin: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    i {
+      margin: 0 1.5rem;
+
+      &:hover {
+        color: $primary-color;
+      }
+    } // end i:hover
+
+    .fa-facebook {
+      color: #3b5998;
+    }
+
+    .fa-twitter {
+      color: #1da1f2;
+    }
+
+    .fa-youtube {
+      color: #c4302b;
+    }
+
+    .fa-instagram {
+      color: #3f729b;
+    }
+  } // end social
+} // end footer
+
+// Import Media Queries
+@import 'media';

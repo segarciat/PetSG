@@ -34,25 +34,25 @@ dog3.jpg: Adam Kontor, pexels.com
     <nav id="navbar">
       <div class="container">
         <div class="navbar-wrap">
-          <div class="logo">
-            <a href="./index.html"><i class="fas fa-paw fa-3x">PetSG</i></a>
+          <div>
+            <div class="logo">
+              <a href="./index.html"><i class="fas fa-paw fa-2x"> PetSG</i></a>
+            </div>
+            <div class="hamburger">
+              <i class="fas fa-bars"></i>
+            </div>
           </div>
           <input type="checkbox" />
-          <div class="hamburger">
-            <div class="mid"></div>
-            <div class="top"></div>
-            <div class="bottom"></div>
-          </div>
           <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li class="dropdown current" onclick="">
-              Gallery <i class="fas fa-angle-down"></i>
+              <span>Gallery <i class="fas fa-angle-down"></i></span>
               <ul>
-                <li>
+                <li class="current">
                   <a href="cats.html">Cats <i class="fas fa-cat"></i></a>
                 </li>
-                <li class="current">
+                <li>
                   <a href="dogs.html">Dogs <i class="fas fa-dog"></i></a>
                 </li>
               </ul>
@@ -63,69 +63,69 @@ dog3.jpg: Adam Kontor, pexels.com
       </div>
     </nav>
     <!-- End Navbar -->
-    <section id="dogs">
+    <section id="cats">
       <div class="container">
         <h1 class="l-heading txt-ctr">
-          A (hu)man's best friend <i class="fas fa-dog"></i>
+          A cat butler it is! <i class="fas fa-cat"></i>
         </h1>
-        <div class="pet-cards text-ctr">
+        <div class="pet-cards">
           <div class="pet-card">
-            <img src="./img/dog1.jpg" alt="dog with green eyes" />
+            <img src="./img/cat1.jpg" alt="Cat with green eyes" />
             <div class="description txt-ctr">
-              <h3>Appa</h3>
+              <h3>Phoebe</h3>
               <div class="summary">
-                <p>Maltese</p>
-                <p>Puppy &diams; Male</p>
-              </div>
-            </div>
-          </div>
-          <div class="pet-card">
-            <img src="./img/dog2.jpg" alt="dog with green eyes" />
-            <div class="description txt-ctr">
-              <h3>Kevin</h3>
-              <div class="summary">
-                <p>Golden Retriever Mix</p>
+                <p>Short-haired cat</p>
                 <p>Adult &diams; Female</p>
               </div>
             </div>
           </div>
           <div class="pet-card">
-            <img src="./img/dog3.jpg" alt="dog with green eyes" />
+            <img src="./img/cat2.jpg" alt="Cat with green eyes" />
             <div class="description txt-ctr">
-              <h3>Mia</h3>
+              <h3>Sunny</h3>
               <div class="summary">
-                <p>German Shepperd</p>
+                <p>Short-haired cat</p>
                 <p>Adult &diams; Female</p>
               </div>
             </div>
           </div>
           <div class="pet-card">
-            <img src="./img/dog4.jpg" alt="dog with green eyes" />
+            <img src="./img/cat3.jpg" alt="Cat with green eyes" />
             <div class="description txt-ctr">
-              <h3>Jake</h3>
+              <h3>Mr. Whiskers</h3>
               <div class="summary">
-                <p>Mixed</p>
+                <p>Short-haired cat</p>
+                <p>Kitten &diams; Male</p>
+              </div>
+            </div>
+          </div>
+          <div class="pet-card">
+            <img src="./img/cat4.jpg" alt="Cat with green eyes" />
+            <div class="description txt-ctr">
+              <h3>Paige</h3>
+              <div class="summary">
+                <p>Short-haired cat</p>
+                <p>Senior &diams; Female</p>
+              </div>
+            </div>
+          </div>
+          <div class="pet-card">
+            <img src="./img/cat5.jpg" alt="Cat with green eyes" />
+            <div class="description txt-ctr">
+              <h3>George</h3>
+              <div class="summary">
+                <p>Russian Blue cat</p>
                 <p>Young &diams; Male</p>
               </div>
             </div>
           </div>
           <div class="pet-card">
-            <img src="./img/dog5.jpg" alt="dog with green eyes" />
+            <img src="./img/cat6.jpg" alt="Cat with green eyes" />
             <div class="description txt-ctr">
-              <h3>Max</h3>
+              <h3>Phoebe</h3>
               <div class="summary">
-                <p>Mixed</p>
-                <p>Puppy &diams; Male</p>
-              </div>
-            </div>
-          </div>
-          <div class="pet-card">
-            <img src="./img/dog6.jpg" alt="dog with green eyes" />
-            <div class="description txt-ctr">
-              <h3>Anna</h3>
-              <div class="summary">
-                <p>Golden Retriever</p>
-                <p>Senior &diams; Female</p>
+                <p>Short-haired cat</p>
+                <p>Adult &diams; Female</p>
               </div>
             </div>
           </div>
@@ -135,7 +135,7 @@ dog3.jpg: Adam Kontor, pexels.com
     <section id="adopt">
       <div class="container">
         <div class="adopt-form b-rad-2">
-          <h1 class="heading txt-ctr">Curious about our bone fetchers?</h1>
+          <h1 class="l-heading txt-ctr">Curious about our furry friends?</h1>
           <form name="contact" method="POST" data-netlify="true">
             <input
               type="text"
@@ -177,7 +177,7 @@ dog3.jpg: Adam Kontor, pexels.com
             </div>
             <textarea
               name="inquiry"
-              class="inquiry-input text-input b-rad-2"
+              class="message-input inquiry-input text-input b-rad-2"
               placeholder="Details concerning pet of choice"
             ></textarea>
             <button type="submit" class="btn btn-main">Submit</button>

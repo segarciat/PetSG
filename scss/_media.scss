@@ -1,0 +1,173 @@
+@media (max-width: 1024px) {
+  .pet-cards {
+    font-size: 0.75rem;
+    grid-gap: 2rem;
+  }
+
+  #services {
+    .service {
+      margin: 0 1rem;
+    }
+  }
+
+  #vet-services,
+  #pet-supplies,
+  #new-owners {
+    & .container > div {
+      flex-direction: column;
+    }
+
+    img {
+      margin-top: 2rem;
+    }
+  } // end #vet-services...
+} // end iPad pro
+
+@media (max-width: 800px) {
+  #showcase {
+    height: 50vh;
+  }
+
+  #about-info {
+    .about-content {
+      grid-template-areas:
+        'about-story peggy'
+        'about-story sergio'
+        'contact-form contact-form';
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  // Hamburger menu
+  #navbar {
+    .navbar-wrap {
+      display: block;
+      & > div {
+        width: 100%;
+        height: 100%;
+        padding: 0 0.25rem;
+      }
+      flex-direction: column;
+      .hamburger i,
+      input[type='checkbox'] {
+        display: block;
+      }
+
+      input[type='checkbox'] {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        width: 2rem;
+        height: 2rem;
+        margin-top: 0.75rem;
+        opacity: 0;
+      }
+
+      .nav-menu {
+        display: none;
+
+        & > li {
+          border-top: 1px #ccc solid;
+        }
+
+        .dropdown {
+          flex-direction: column;
+
+          & > span {
+            margin-bottom: 0.5rem;
+          }
+          ul {
+            position: relative;
+          }
+        }
+      }
+
+      input[type='checkbox']:checked ~ .nav-menu {
+        display: block;
+        height: auto;
+
+        .dropdown ul {
+          position: relative;
+        }
+      }
+    } // end .navbar-wrap
+  } // end navbar
+
+  #showcase {
+    // font-size: 1rem;
+    .showcase-content {
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        font-size: 0.75rem;
+      }
+
+      a {
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  #home-adopt {
+    .l-heading {
+      font-size: 2rem;
+    }
+
+    .l-heading ~ p {
+      font-size: 1rem;
+    }
+  }
+
+  .pet-cards {
+    display: block;
+
+    .pet-card {
+      margin: 1.5rem 1rem;
+      font-size: rem;
+    }
+  }
+
+  #services {
+    .services-wrap {
+      display: block;
+
+      .service {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  #about-info {
+    .about-content {
+      display: block;
+
+      .about-story {
+        margin-bottom: 1rem;
+      }
+      .sergio-img,
+      .peggy {
+        display: none;
+      }
+    }
+  }
+
+  #adopt {
+    .adopt-form {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      form {
+        display: block;
+
+        .inquiry-input {
+          height: 150px;
+        }
+      } // end form
+    } // end .adopt-form
+  } // end #adopt
+} // end iPhone 6/7/8/X
