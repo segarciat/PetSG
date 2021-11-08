@@ -31,7 +31,8 @@ img {
   width: 100%;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
@@ -126,24 +127,22 @@ ul {
 // Home #showcase
 #showcase {
   background: url('../img/showcase-img.jpg') no-repeat center center/cover;
-  height: 100vh;
   position: relative;
-  // Send it to the back so that it doesn't block the nav bar dropdown link
-  // z-index: -1;
+  height: 100vh;
+
+  .container {
+    height: 100%;
+  }
 
   .showcase-content {
+    height: 100%;
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    color: #fff;
-    font-size: 1.5rem;
-    padding: 0 6rem;
-    position: relative;
-    // z-index works if have position attribute
-    // z-index: 1;
-    // position: relative;
 
     a {
       font-size: 1.2rem;
@@ -160,12 +159,11 @@ ul {
     background-color: rgba(0, 0, 0, 0.25);
     height: 100%;
     width: 100%;
-  } // end &:before (overlay);
+  }
 } // end showcase
 
 .pet-cards {
-  margin: 0 2rem;
-  padding: 5% 0;
+  margin: 2rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4rem;
@@ -173,44 +171,33 @@ ul {
   .pet-card {
     position: relative;
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 300px;
 
-    .description {
-      background: $light-color;
-      // Stretch out as much as the image
-      width: 100%;
-      height: 50%;
-      position: absolute;
-      height: 30%;
-      bottom: 0;
+    .card-image {
+      flex: 1;
+      overflow: hidden;
+    }
 
-      h3 {
+    .card-description {
+      flex: 0.4;
+
+      .card-name {
         color: $primary-color;
-        position: relative;
-        top: 40%;
-        transition: all 0.5s ease-in-out;
-      } // end h3
+        margin: 0.5rem 0;
+      }
 
-      .summary {
-        position: relative;
+      .card-summary {
         opacity: 0;
-        top: 100%;
-        transition: all 0.5s ease-in-out;
-      } // end .summary
-    } // end .description
-
-    img {
-      position: relative;
-    } // end .img
-
-    &:hover {
-      h3 {
-        top: 0;
+        transform: scale(0);
+        transition: all 0.3s;
       }
+    }
 
-      .summary {
-        top: 5%;
-        opacity: 1;
-      }
+    &:hover .card-description .card-summary {
+      opacity: 1;
+      transform: scale(1);
     }
   } // end .pet-card
 } // end .pet-cards
@@ -219,17 +206,17 @@ ul {
 #services {
   background: #fff;
   padding: 3rem 0;
+
   .services-wrap {
-    margin: 0 2rem;
     display: flex;
     justify-content: space-around;
 
-    i {
+    .service-icon i {
       background: $dark-color;
-      border-radius: 50%;
       color: $primary-color;
-      padding: 1.5rem;
-      transition: all 0.25s ease-in;
+      font-size: 2rem;
+      padding: 1rem;
+      border-radius: 100%;
 
       &:hover {
         background: $primary-color;
@@ -240,43 +227,37 @@ ul {
 } // end #services
 
 // About Page
-#about-info {
-  // height: 1000px;
+#about {
+  padding: 0 2rem;
   .about-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
     margin: 1rem 0;
-    padding: 0 2rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
     display: grid;
     grid-template-areas:
-      'about-story peggy'
-      'contact-form sergio';
-    grid-gap: 2rem;
+      'about-story about-img'
+      'contact-form about-img';
 
-    .sergio-img {
-      grid-area: sergio;
-    }
-
-    .peggy {
-      grid-area: peggy;
-    }
-
-    .peggy,
-    .sergio-img {
-      // width: 80%;
-      border-radius: 10%;
-    }
-
+    grid-gap: 1rem;
     .about-story {
       grid-area: about-story;
       background: #fff;
-      padding: 2rem;
+      margin-right: 1rem;
+    }
+
+    .about-img {
+      grid-area: about-img;
+      img {
+        border-radius: 5%;
+      }
     }
 
     .contact-form {
-      background: #fff;
-      padding: 1rem;
       grid-area: contact-form;
-
+      background: #fff;
+      grid-area: contact-form;
       form {
         display: flex;
         flex-direction: column;
@@ -362,9 +343,8 @@ ul {
 #pet-supplies,
 #new-owners {
   font-size: 1.2rem;
-  text-align: justify;
-  ul {
-    list-style: disc;
+  ol {
+    margin-left: 1rem;
   }
   & .container > div {
     background: #fff;
@@ -372,6 +352,7 @@ ul {
     padding: 2rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     & > div {
       padding-right: 1rem;

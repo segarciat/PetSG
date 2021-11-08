@@ -13,9 +13,9 @@
 .btn {
   text-decoration: none;
   border: none;
-  border-radius: 15px;
+  border-radius: 5px;
   cursor: pointer;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   background: #f4f4f4;
   color: #333; }
 
@@ -38,10 +38,10 @@
   margin-bottom: 2rem; }
 
 .b-rad-2 {
-  border-radius: 30px; }
+  border-radius: 15px; }
 
 .b-rad-1 {
-  border-radius: 15px; }
+  border-radius: 5px; }
 
 .text-input {
   padding: 0.75rem;
@@ -81,7 +81,8 @@ a {
 img {
   width: 100%; }
 
-ul {
+ul,
+ol {
   list-style: none; }
 
 #navbar {
@@ -147,18 +148,19 @@ ul {
 
 #showcase {
   background: url("../img/showcase-img.jpg") no-repeat center center/cover;
-  height: 100vh;
-  position: relative; }
+  position: relative;
+  height: 100vh; }
+  #showcase .container {
+    height: 100%; }
   #showcase .showcase-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100%;
     color: #fff;
     font-size: 1.5rem;
-    padding: 0 6rem;
-    position: relative; }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
     #showcase .showcase-content a {
       font-size: 1.2rem;
       margin-top: 1rem; }
@@ -172,83 +174,76 @@ ul {
     width: 100%; }
 
 .pet-cards {
-  margin: 0 2rem;
-  padding: 5% 0;
+  margin: 2rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4rem; }
   .pet-cards .pet-card {
     position: relative;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3); }
-    .pet-cards .pet-card .description {
-      background: #f4f4f4;
-      width: 100%;
-      height: 50%;
-      position: absolute;
-      height: 30%;
-      bottom: 0; }
-      .pet-cards .pet-card .description h3 {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 300px; }
+    .pet-cards .pet-card .card-image {
+      flex: 1;
+      overflow: hidden; }
+    .pet-cards .pet-card .card-description {
+      flex: 0.4; }
+      .pet-cards .pet-card .card-description .card-name {
         color: #a42422;
-        position: relative;
-        top: 40%;
-        transition: all 0.5s ease-in-out; }
-      .pet-cards .pet-card .description .summary {
-        position: relative;
+        margin: 0.5rem 0; }
+      .pet-cards .pet-card .card-description .card-summary {
         opacity: 0;
-        top: 100%;
-        transition: all 0.5s ease-in-out; }
-    .pet-cards .pet-card img {
-      position: relative; }
-    .pet-cards .pet-card:hover h3 {
-      top: 0; }
-    .pet-cards .pet-card:hover .summary {
-      top: 5%;
-      opacity: 1; }
+        transform: scale(0);
+        transition: all 0.3s; }
+    .pet-cards .pet-card:hover .card-description .card-summary {
+      opacity: 1;
+      transform: scale(1); }
 
 #services {
   background: #fff;
   padding: 3rem 0; }
   #services .services-wrap {
-    margin: 0 2rem;
     display: flex;
     justify-content: space-around; }
-    #services .services-wrap i {
+    #services .services-wrap .service-icon i {
       background: #333;
-      border-radius: 50%;
       color: #a42422;
-      padding: 1.5rem;
-      transition: all 0.25s ease-in; }
-      #services .services-wrap i:hover {
+      font-size: 2rem;
+      padding: 1rem;
+      border-radius: 100%; }
+      #services .services-wrap .service-icon i:hover {
         background: #a42422;
         color: #333; }
 
-#about-info .about-content {
-  margin: 1rem 0;
-  padding: 0 2rem;
-  font-size: 1rem;
-  display: grid;
-  grid-template-areas: 'about-story peggy' 'contact-form sergio';
-  grid-gap: 2rem; }
-  #about-info .about-content .sergio-img {
-    grid-area: sergio; }
-  #about-info .about-content .peggy {
-    grid-area: peggy; }
-  #about-info .about-content .peggy,
-  #about-info .about-content .sergio-img {
-    border-radius: 10%; }
-  #about-info .about-content .about-story {
-    grid-area: about-story;
-    background: #fff;
-    padding: 2rem; }
-  #about-info .about-content .contact-form {
-    background: #fff;
-    padding: 1rem;
-    grid-area: contact-form; }
-    #about-info .about-content .contact-form form {
-      display: flex;
-      flex-direction: column; }
-      #about-info .about-content .contact-form form .message-input {
-        height: 100px; }
+#about {
+  padding: 0 2rem; }
+  #about .about-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    display: grid;
+    grid-template-areas: 'about-story about-img' 'contact-form about-img';
+    grid-gap: 1rem; }
+    #about .about-content .about-story {
+      grid-area: about-story;
+      background: #fff;
+      margin-right: 1rem; }
+    #about .about-content .about-img {
+      grid-area: about-img; }
+      #about .about-content .about-img img {
+        border-radius: 5%; }
+    #about .about-content .contact-form {
+      grid-area: contact-form;
+      background: #fff;
+      grid-area: contact-form; }
+      #about .about-content .contact-form form {
+        display: flex;
+        flex-direction: column; }
+        #about .about-content .contact-form form .message-input {
+          height: 100px; }
 
 #cats,
 #dogs {
@@ -289,12 +284,11 @@ ul {
 #vet-services,
 #pet-supplies,
 #new-owners {
-  font-size: 1.2rem;
-  text-align: justify; }
-  #vet-services ul,
-  #pet-supplies ul,
-  #new-owners ul {
-    list-style: disc; }
+  font-size: 1.2rem; }
+  #vet-services ol,
+  #pet-supplies ol,
+  #new-owners ol {
+    margin-left: 1rem; }
   #vet-services .container > div,
   #pet-supplies .container > div,
   #new-owners .container > div {
@@ -302,7 +296,8 @@ ul {
     margin: 1.5rem 2rem;
     padding: 2rem;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
     #vet-services .container > div > div,
     #pet-supplies .container > div > div,
     #new-owners .container > div > div {
@@ -341,7 +336,7 @@ footer {
     footer .footer-wrap .fa-instagram {
       color: #3f729b; }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .pet-cards {
     font-size: 0.75rem;
     grid-gap: 2rem; }
@@ -356,13 +351,17 @@ footer {
   #new-owners img {
     margin-top: 2rem; } }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   #showcase {
-    height: 50vh; }
-  #about-info .about-content {
-    grid-template-areas: 'about-story peggy' 'about-story sergio' 'contact-form contact-form'; } }
+    height: 60vh; }
+  .pet-cards .pet-card {
+    height: 200px; }
+    .pet-cards .pet-card .card-image {
+      flex: 1; }
+    .pet-cards .pet-card .card-description {
+      flex: 0.5; } }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 500px) {
   #navbar .navbar-wrap {
     display: block;
     flex-direction: column; }
@@ -397,12 +396,14 @@ footer {
       height: auto; }
       #navbar .navbar-wrap input[type='checkbox']:checked ~ .nav-menu .dropdown ul {
         position: relative; }
-  #showcase .showcase-content h1 {
-    font-size: 1.25rem; }
-  #showcase .showcase-content p {
-    font-size: 0.75rem; }
-  #showcase .showcase-content a {
-    font-size: 0.75rem; }
+  #showcase {
+    height: 75vh; }
+    #showcase .showcase-content h1 {
+      font-size: 1.25rem; }
+    #showcase .showcase-content p {
+      font-size: 0.75rem; }
+    #showcase .showcase-content a {
+      font-size: 0.75rem; }
   #home-adopt .l-heading {
     font-size: 2rem; }
   #home-adopt .l-heading ~ p {
@@ -411,17 +412,25 @@ footer {
     display: block; }
     .pet-cards .pet-card {
       margin: 1.5rem 1rem;
-      font-size: rem; }
+      font-size: 1.1 rem;
+      height: 300px; }
+      .pet-cards .pet-card .card-image {
+        flex: 1; }
+      .pet-cards .pet-card .card-description {
+        flex: 0.4; }
   #services .services-wrap {
     display: block; }
     #services .services-wrap .service {
       margin-bottom: 1rem; }
-  #about-info .about-content {
+  #vet-services .l-heading,
+  #pet-supplies .l-heading,
+  #new-owners .l-heading {
+    font-size: 2rem; }
+  #about .about-content {
     display: block; }
-    #about-info .about-content .about-story {
+    #about .about-content .about-story {
       margin-bottom: 1rem; }
-    #about-info .about-content .sergio-img,
-    #about-info .about-content .peggy {
+    #about .about-content .about-img {
       display: none; }
   #adopt .adopt-form h1 {
     font-size: 1.5rem; }

@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .pet-cards {
     font-size: 0.75rem;
     grid-gap: 2rem;
@@ -23,22 +23,24 @@
   } // end #vet-services...
 } // end iPad pro
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   #showcase {
-    height: 50vh;
+    height: 60vh;
   }
 
-  #about-info {
-    .about-content {
-      grid-template-areas:
-        'about-story peggy'
-        'about-story sergio'
-        'contact-form contact-form';
+  .pet-cards .pet-card {
+    height: 200px;
+    .card-image {
+      flex: 1;
+    }
+
+    .card-description {
+      flex: 0.5;
     }
   }
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 500px) {
   // Hamburger menu
   #navbar {
     .navbar-wrap {
@@ -97,6 +99,7 @@
 
   #showcase {
     // font-size: 1rem;
+    height: 75vh;
     .showcase-content {
       h1 {
         font-size: 1.25rem;
@@ -127,7 +130,16 @@
 
     .pet-card {
       margin: 1.5rem 1rem;
-      font-size: rem;
+      font-size: 1.1 rem;
+      height: 300px;
+
+      .card-image {
+        flex: 1;
+      }
+
+      .card-description {
+        flex: 0.4;
+      }
     }
   }
 
@@ -141,15 +153,21 @@
     }
   }
 
-  #about-info {
+  #vet-services,
+  #pet-supplies,
+  #new-owners {
+    .l-heading {
+      font-size: 2rem;
+    }
+  }
+
+  #about {
     .about-content {
       display: block;
-
       .about-story {
         margin-bottom: 1rem;
       }
-      .sergio-img,
-      .peggy {
+      .about-img {
         display: none;
       }
     }
