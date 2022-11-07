@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css --recusive"
+    "sass": "sass -w scss/:dist/css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "node-sass": "^6.0.1"
+    "sass": "^1.56.0"
   }
 }

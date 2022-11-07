@@ -55,7 +55,7 @@ ol {
     justify-content: space-between;
     align-items: center;
 
-    & > div {
+    &>div {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -119,10 +119,18 @@ ol {
         &:hover ul {
           display: block;
         }
-      } // end .dropdown
-    } // end .nav-menu
-  } // end .navbar-wrap
-} // end #navbar
+      }
+
+      // end .dropdown
+    }
+
+    // end .nav-menu
+  }
+
+  // end .navbar-wrap
+}
+
+// end #navbar
 
 // Home #showcase
 #showcase {
@@ -148,7 +156,9 @@ ol {
       font-size: 1.2rem;
       margin-top: 1rem;
     }
-  } // end showcase-content
+  }
+
+  // end showcase-content
 
   //overlay
   &:before {
@@ -160,7 +170,9 @@ ol {
     height: 100%;
     width: 100%;
   }
-} // end showcase
+}
+
+// end showcase
 
 .pet-cards {
   margin: 2rem 0;
@@ -199,8 +211,12 @@ ol {
       opacity: 1;
       transform: scale(1);
     }
-  } // end .pet-card
-} // end .pet-cards
+  }
+
+  // end .pet-card
+}
+
+// end .pet-cards
 
 // Home - services
 #services {
@@ -223,12 +239,17 @@ ol {
         color: $dark-color;
       }
     }
-  } // end .services-wrap
-} // end #services
+  }
+
+  // end .services-wrap
+}
+
+// end #services
 
 // About Page
 #about {
   padding: 0 2rem;
+
   .about-content {
     background-color: #fff;
     padding: 2rem;
@@ -241,6 +262,7 @@ ol {
       'contact-form about-img';
 
     grid-gap: 1rem;
+
     .about-story {
       grid-area: about-story;
       background: #fff;
@@ -249,6 +271,7 @@ ol {
 
     .about-img {
       grid-area: about-img;
+
       img {
         border-radius: 5%;
       }
@@ -258,6 +281,7 @@ ol {
       grid-area: contact-form;
       background: #fff;
       grid-area: contact-form;
+
       form {
         display: flex;
         flex-direction: column;
@@ -265,10 +289,18 @@ ol {
         .message-input {
           height: 100px;
         }
-      } // end form
-    } // end contact-form
-  } // end .about-content
-} // end #about-info
+      }
+
+      // end form
+    }
+
+    // end contact-form
+  }
+
+  // end .about-content
+}
+
+// end #about-info
 
 // Cats page
 #cats,
@@ -334,19 +366,27 @@ ol {
       .form-group {
         margin-bottom: 1rem;
       }
-    } // end form
-  } // end .adopt-form
-} // end #adopt
+    }
+
+    // end form
+  }
+
+  // end .adopt-form
+}
+
+// end #adopt
 
 // Resources page
 #vet-services,
 #pet-supplies,
 #new-owners {
   font-size: 1.2rem;
+
   ol {
     margin-left: 1rem;
   }
-  & .container > div {
+
+  & .container>div {
     background: #fff;
     margin: 1.5rem 2rem;
     padding: 2rem;
@@ -354,7 +394,7 @@ ol {
     justify-content: space-between;
     align-items: center;
 
-    & > div {
+    &>div {
       padding-right: 1rem;
       order: 1;
       flex: 2;
@@ -369,8 +409,12 @@ ol {
     a {
       color: $primary-color;
     }
-  } // end vet-container
-} // end #ver-services
+  }
+
+  // end vet-container
+}
+
+// end #ver-services
 
 // Footer
 footer {
@@ -389,7 +433,9 @@ footer {
       &:hover {
         color: $primary-color;
       }
-    } // end i:hover
+    }
+
+    // end i:hover
 
     .fa-facebook {
       color: #3b5998;
@@ -406,8 +452,12 @@ footer {
     .fa-instagram {
       color: #3f729b;
     }
-  } // end social
-} // end footer
+  }
+
+  // end social
+}
+
+// end footer
 
 // Import Media Queries
 @import 'media';
